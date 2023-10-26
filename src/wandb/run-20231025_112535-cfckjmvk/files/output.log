@@ -1,0 +1,406 @@
+
+Loading checkpoint shards: 100%|████████████████████████████████████████████████████████| 2/2 [00:06<00:00,  3.45s/it]
+/workdir/env/lib/python3.10/site-packages/transformers/utils/hub.py:374: FutureWarning: The `use_auth_token` argument is deprecated and will be removed in v5 of Transformers.
+  warnings.warn(
+/workdir/env/lib/python3.10/site-packages/peft/utils/other.py:122: FutureWarning: prepare_model_for_int8_training is deprecated and will be removed in a future version. Use prepare_model_for_kbit_training instead.
+  warnings.warn(
+--> Model meta-llama/Llama-2-7b-hf
+--> meta-llama/Llama-2-7b-hf has 262.41024 Million params
+/workdir/env/lib/python3.10/site-packages/torch/cuda/memory.py:303: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 0:   0%|[34m                                                                       [39m| 0/75 [00:00<?, ?it/s]
+trainable params: 33,554,432 || all params: 6,771,970,048 || trainable%: 0.49548996469513035
+--> Training Set Length = 300
+Training Epoch: 0:   0%|[34m                                                                       [39m| 0/75 [00:00<?, ?it/s]/workdir/env/lib/python3.10/site-packages/bitsandbytes/autograd/_functions.py:321: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Training Epoch: 0/3, step 73/75 completed (loss: 0.4401818811893463): : 2701it [04:42, 12.39it/s]
+Training Epoch: 0/3, step 74/75 completed (loss: 0.4928947985172272): : 2775it [04:49, 11.73it/s]
+evaluating Epoch:   0%|[32m                                                                       [39m| 0/200 [00:00<?, ?it/s]
+Max CUDA memory allocated was 8 GB
+Max CUDA memory reserved was 9 GB
+Peak active CUDA memory was 8 GB
+Cuda Malloc retires : 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Training Epoch: 0/3, step 74/75 completed (loss: 0.4928947985172272): : 2775it [07:10,  6.44it/s]:19<00:00,  1.55it/s]
+Training Epoch: 1:   0%|[34m                                                                       [39m| 0/75 [00:00<?, ?it/s]
+ eval_ppl=tensor(nan, device='cuda:0') eval_epoch_loss=tensor(nan, device='cuda:0')
+Epoch 1: train_perplexity=2.0107, train_epoch_loss=0.6985, epcoh time 290.46642171405256s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Training Epoch: 1/3, step 74/75 completed (loss: 0.4221082329750061): : 2775it [03:50, 23.34it/s]
+Saving model at epoch: 1
+Max CUDA memory allocated was 8 GB
+Max CUDA memory reserved was 9 GB
+Peak active CUDA memory was 8 GB
+Cuda Malloc retires : 0
+
+Training Epoch: 1/3, step 74/75 completed (loss: 0.4221082329750061): : 2775it [04:07, 23.34it/s]
+ eval_ppl=tensor(nan, device='cuda:0') eval_epoch_loss=tensor(nan, device='cuda:0')
+
+Training Epoch: 1/3, step 74/75 completed (loss: 0.4221082329750061): : 2775it [05:56,  7.79it/s]0/75 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Training Epoch: 2/3, step 74/75 completed (loss: 0.34424975514411926): : 2775it [03:50, 23.33it/s]
+evaluating Epoch:   0%|[32m                                                                       [39m| 0/200 [00:00<?, ?it/s]
+Saving model at epoch: 2
+Max CUDA memory allocated was 8 GB
+Max CUDA memory reserved was 9 GB
+Peak active CUDA memory was 8 GB
+Cuda Malloc retires : 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Training Epoch: 2/3, step 74/75 completed (loss: 0.34424975514411926): : 2775it [05:57,  7.77it/s]05<00:00,  1.66it/s]
+ eval_ppl=tensor(nan, device='cuda:0') eval_epoch_loss=tensor(nan, device='cuda:0')
+Epoch 3: train_perplexity=1.6292, train_epoch_loss=0.4881, epcoh time 231.20920642558485s
+Key: avg_train_prep, Value: 1.8154563903808594
+Key: avg_train_loss, Value: 0.5926504135131836
+Key: avg_eval_prep, Value: nan
+Key: avg_eval_loss, Value: inf
+Key: avg_epoch_time, Value: 251.06695794127882
+Key: avg_checkpoint_time, Value: 0.0008605333666006724

@@ -1,0 +1,47 @@
+wandb_version: 1
+
+num_of_epoch:
+  desc: null
+  value: 3
+base_model_name:
+  desc: null
+  value: meta-llama/Llama-2-7b-hf
+batch_size:
+  desc: null
+  value: 4
+_wandb:
+  desc: null
+  value:
+    python_version: 3.10.12
+    cli_version: 0.15.9
+    framework: huggingface
+    huggingface_version: 4.33.1
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1698214768.790303
+    t:
+      1:
+      - 1
+      - 11
+      - 49
+      - 51
+      - 55
+      - 71
+      - 98
+      2:
+      - 1
+      - 11
+      - 49
+      - 51
+      - 55
+      - 71
+      - 98
+      3:
+      - 13
+      - 16
+      - 23
+      4: 3.10.12
+      5: 0.15.9
+      6: 4.33.1
+      8:
+      - 5

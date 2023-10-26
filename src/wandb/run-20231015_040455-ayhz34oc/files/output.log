@@ -1,0 +1,168 @@
+
+
+Loading checkpoint shards: 100%|█████████████████████████████████████████████| 2/2 [00:22<00:00, 11.32s/it]
+/workdir/env/lib/python3.10/site-packages/peft/utils/other.py:122: FutureWarning: prepare_model_for_int8_training is deprecated and will be removed in a future version. Use prepare_model_for_kbit_training instead.
+  warnings.warn(
+--> Model /workdir/ViLLM/finetuned_models
+--> /workdir/ViLLM/finetuned_models has 262.41024 Million params
+trainable params: 33,554,432 || all params: 6,771,970,048 || trainable%: 0.49548996469513035
+/workdir/env/lib/python3.10/site-packages/torch/cuda/memory.py:303: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 0:   0%|[34m                                                          [39m| 0/6532 [00:00<?, ?it/s]/workdir/env/lib/python3.10/site-packages/bitsandbytes/autograd/_functions.py:321: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+--> Training Set Length = 26129
+--> Validation Set Length = 200
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Training Epoch: 0/3, step 22/6532 completed (loss: nan):   4%|[34m▍         [39m| 253/6532 [01:10<15:49,  6.61it/s]Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/workdir/llama-recipes/src/llama_recipes/finetuning.py", line 256, in <module>
+    fire.Fire(main)
+  File "/workdir/env/lib/python3.10/site-packages/fire/core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "/workdir/env/lib/python3.10/site-packages/fire/core.py", line 475, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "/workdir/env/lib/python3.10/site-packages/fire/core.py", line 691, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "/workdir/llama-recipes/src/llama_recipes/finetuning.py", line 236, in main
+    results = train(
+  File "/workdir/llama-recipes/src/llama_recipes/utils/train_utils.py", line 80, in train
+    loss = model(**batch).loss
+  File "/workdir/env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workdir/env/lib/python3.10/site-packages/peft/peft_model.py", line 931, in forward
+    return self.base_model(
+  File "/workdir/env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workdir/env/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 94, in forward
+    return self.model.forward(*args, **kwargs)
+  File "/workdir/env/lib/python3.10/site-packages/accelerate/hooks.py", line 165, in new_forward
+    output = old_forward(*args, **kwargs)
+  File "/workdir/env/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 820, in forward
+    outputs = self.model(
+  File "/workdir/env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workdir/env/lib/python3.10/site-packages/accelerate/hooks.py", line 165, in new_forward
+    output = old_forward(*args, **kwargs)
+  File "/workdir/env/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 701, in forward
+    layer_outputs = torch.utils.checkpoint.checkpoint(
+  File "/workdir/env/lib/python3.10/site-packages/torch/utils/checkpoint.py", line 249, in checkpoint
+    return CheckpointFunction.apply(function, preserve, *args)
+  File "/workdir/env/lib/python3.10/site-packages/torch/autograd/function.py", line 506, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+  File "/workdir/env/lib/python3.10/site-packages/torch/utils/checkpoint.py", line 107, in forward
+    outputs = run_function(*args)
+  File "/workdir/env/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 697, in custom_forward
+    return module(*inputs, past_key_value, output_attentions)
+  File "/workdir/env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workdir/env/lib/python3.10/site-packages/accelerate/hooks.py", line 165, in new_forward
+    output = old_forward(*args, **kwargs)
+  File "/workdir/env/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 424, in forward
+    hidden_states, self_attn_weights, present_key_value = self.self_attn(
+  File "/workdir/env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workdir/env/lib/python3.10/site-packages/accelerate/hooks.py", line 165, in new_forward
+    output = old_forward(*args, **kwargs)
+  File "/workdir/env/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 322, in forward
+    key_states = self.k_proj(hidden_states)
+  File "/workdir/env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workdir/env/lib/python3.10/site-packages/accelerate/hooks.py", line 165, in new_forward
+    output = old_forward(*args, **kwargs)
+  File "/workdir/env/lib/python3.10/site-packages/bitsandbytes/nn/modules.py", line 402, in forward
+    out = bnb.matmul(x, self.weight, bias=self.bias, state=self.state)
+  File "/workdir/env/lib/python3.10/site-packages/bitsandbytes/autograd/_functions.py", line 562, in matmul
+    return MatMul8bitLt.apply(A, B, out, bias, state)
+  File "/workdir/env/lib/python3.10/site-packages/torch/autograd/function.py", line 506, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/workdir/llama-recipes/src/llama_recipes/finetuning.py", line 256, in <module>
+    fire.Fire(main)
+  File "/workdir/env/lib/python3.10/site-packages/fire/core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "/workdir/env/lib/python3.10/site-packages/fire/core.py", line 475, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "/workdir/env/lib/python3.10/site-packages/fire/core.py", line 691, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "/workdir/llama-recipes/src/llama_recipes/finetuning.py", line 236, in main
+    results = train(
+  File "/workdir/llama-recipes/src/llama_recipes/utils/train_utils.py", line 80, in train
+    loss = model(**batch).loss
+  File "/workdir/env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workdir/env/lib/python3.10/site-packages/peft/peft_model.py", line 931, in forward
+    return self.base_model(
+  File "/workdir/env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workdir/env/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 94, in forward
+    return self.model.forward(*args, **kwargs)
+  File "/workdir/env/lib/python3.10/site-packages/accelerate/hooks.py", line 165, in new_forward
+    output = old_forward(*args, **kwargs)
+  File "/workdir/env/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 820, in forward
+    outputs = self.model(
+  File "/workdir/env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workdir/env/lib/python3.10/site-packages/accelerate/hooks.py", line 165, in new_forward
+    output = old_forward(*args, **kwargs)
+  File "/workdir/env/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 701, in forward
+    layer_outputs = torch.utils.checkpoint.checkpoint(
+  File "/workdir/env/lib/python3.10/site-packages/torch/utils/checkpoint.py", line 249, in checkpoint
+    return CheckpointFunction.apply(function, preserve, *args)
+  File "/workdir/env/lib/python3.10/site-packages/torch/autograd/function.py", line 506, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+  File "/workdir/env/lib/python3.10/site-packages/torch/utils/checkpoint.py", line 107, in forward
+    outputs = run_function(*args)
+  File "/workdir/env/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 697, in custom_forward
+    return module(*inputs, past_key_value, output_attentions)
+  File "/workdir/env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workdir/env/lib/python3.10/site-packages/accelerate/hooks.py", line 165, in new_forward
+    output = old_forward(*args, **kwargs)
+  File "/workdir/env/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 424, in forward
+    hidden_states, self_attn_weights, present_key_value = self.self_attn(
+  File "/workdir/env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workdir/env/lib/python3.10/site-packages/accelerate/hooks.py", line 165, in new_forward
+    output = old_forward(*args, **kwargs)
+  File "/workdir/env/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 322, in forward
+    key_states = self.k_proj(hidden_states)
+  File "/workdir/env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workdir/env/lib/python3.10/site-packages/accelerate/hooks.py", line 165, in new_forward
+    output = old_forward(*args, **kwargs)
+  File "/workdir/env/lib/python3.10/site-packages/bitsandbytes/nn/modules.py", line 402, in forward
+    out = bnb.matmul(x, self.weight, bias=self.bias, state=self.state)
+  File "/workdir/env/lib/python3.10/site-packages/bitsandbytes/autograd/_functions.py", line 562, in matmul
+    return MatMul8bitLt.apply(A, B, out, bias, state)
+  File "/workdir/env/lib/python3.10/site-packages/torch/autograd/function.py", line 506, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+KeyboardInterrupt

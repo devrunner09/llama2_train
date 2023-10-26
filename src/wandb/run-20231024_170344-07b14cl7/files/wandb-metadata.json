@@ -1,0 +1,89 @@
+{
+    "os": "Linux-5.4.0-162-generic-x86_64-with-glibc2.35",
+    "python": "3.10.12",
+    "heartbeatAt": "2023-10-24T10:03:45.928244",
+    "startedAt": "2023-10-24T10:03:44.883300",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--use_peft",
+        "--peft_method",
+        "lora",
+        "--quantization"
+    ],
+    "state": "running",
+    "program": "-m llama_recipes.finetuning",
+    "git": {
+        "remote": "https://github.com/facebookresearch/llama-recipes.git",
+        "commit": null
+    },
+    "email": null,
+    "root": "/workdir/llama-recipes/src",
+    "host": "2a491909ffc2",
+    "username": "root",
+    "executable": "/workdir/env/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 2194.8430000000003,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2194.843,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2194.843,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2194.843,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2194.843,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2194.843,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2194.843,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2194.843,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2194.843,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "total": 497.48069763183594,
+        "used": 419.5210151672363
+    },
+    "gpu": "NVIDIA A30",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA A30",
+            "memory_total": 25769803776
+        }
+    ],
+    "memory": {
+        "total": 31.319129943847656
+    }
+}

@@ -1,0 +1,54 @@
+
+Loading checkpoint shards: 100%|███████████████████████████████████████████| 2/2 [00:02<00:00,  1.48s/it]
+/workdir/env/lib/python3.10/site-packages/transformers/utils/hub.py:374: FutureWarning: The `use_auth_token` argument is deprecated and will be removed in v5 of Transformers.
+  warnings.warn(
+/workdir/env/lib/python3.10/site-packages/peft/utils/other.py:122: FutureWarning: prepare_model_for_int8_training is deprecated and will be removed in a future version. Use prepare_model_for_kbit_training instead.
+  warnings.warn(
+--> Model meta-llama/Llama-2-7b-hf
+--> meta-llama/Llama-2-7b-hf has 262.41024 Million params
+trainable params: 33,554,432 || all params: 6,771,970,048 || trainable%: 0.49548996469513035
+=================Dataset Config================
+<class 'llama_recipes.configs.datasets.alpaca_dataset'>
+===============================================
+=============================
+Loading dataset at: /workdir/llama-recipes/src/llama_recipes/datasets/vi-sample.json
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/workdir/llama-recipes/src/llama_recipes/finetuning.py", line 278, in <module>
+    fire.Fire(main)
+  File "/workdir/env/lib/python3.10/site-packages/fire/core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "/workdir/env/lib/python3.10/site-packages/fire/core.py", line 475, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "/workdir/env/lib/python3.10/site-packages/fire/core.py", line 691, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "/workdir/llama-recipes/src/llama_recipes/finetuning.py", line 166, in main
+    dataset_train = get_preprocessed_dataset(
+  File "/workdir/llama-recipes/src/llama_recipes/utils/dataset_utils.py", line 35, in get_preprocessed_dataset
+    return DATASET_PREPROC[dataset_config.dataset](
+  File "/workdir/llama-recipes/src/llama_recipes/datasets/alpaca_dataset.py", line 30, in __init__
+    print("Current max words: {}".format(self.max_words))
+AttributeError: 'InstructionDataset' object has no attribute 'max_words'
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/workdir/llama-recipes/src/llama_recipes/finetuning.py", line 278, in <module>
+    fire.Fire(main)
+  File "/workdir/env/lib/python3.10/site-packages/fire/core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "/workdir/env/lib/python3.10/site-packages/fire/core.py", line 475, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "/workdir/env/lib/python3.10/site-packages/fire/core.py", line 691, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "/workdir/llama-recipes/src/llama_recipes/finetuning.py", line 166, in main
+    dataset_train = get_preprocessed_dataset(
+  File "/workdir/llama-recipes/src/llama_recipes/utils/dataset_utils.py", line 35, in get_preprocessed_dataset
+    return DATASET_PREPROC[dataset_config.dataset](
+  File "/workdir/llama-recipes/src/llama_recipes/datasets/alpaca_dataset.py", line 30, in __init__
+    print("Current max words: {}".format(self.max_words))
+AttributeError: 'InstructionDataset' object has no attribute 'max_words'

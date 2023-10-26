@@ -1,0 +1,252 @@
+
+
+Loading checkpoint shards: 100%|██████████████████████████████████████████████████████| 2/2 [00:42<00:00, 21.19s/it]
+/workdir/env/lib/python3.10/site-packages/transformers/utils/hub.py:374: FutureWarning: The `use_auth_token` argument is deprecated and will be removed in v5 of Transformers.
+  warnings.warn(
+/workdir/env/lib/python3.10/site-packages/peft/utils/other.py:122: FutureWarning: prepare_model_for_int8_training is deprecated and will be removed in a future version. Use prepare_model_for_kbit_training instead.
+  warnings.warn(
+--> Model meta-llama/Llama-2-7b-hf
+--> meta-llama/Llama-2-7b-hf has 262.41024 Million params
+/workdir/env/lib/python3.10/site-packages/torch/cuda/memory.py:303: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 0:   0%|[34m                                                                     [39m| 0/25 [00:00<?, ?it/s]/workdir/env/lib/python3.10/site-packages/bitsandbytes/autograd/_functions.py:321: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+trainable params: 33,554,432 || all params: 6,771,970,048 || trainable%: 0.49548996469513035
+=============================
+Loading dataset at: /workdir/llama-recipes/src/llama_recipes/datasets/vi-sample.json
+Current max words: 1024
+=============================
+This is raw prompt at index 0:
+Below is an instruction that describes a task. Write a response that appropriately completes the request.
+### Instruction:
+Viết lại câu này cho ngắn gọn và thuyết phục hơn:
+Công ty chúng tôi có nhiều sản phẩm tuyệt vời mà tất cả các khách hàng của chúng tôi đánh giá cao.
+### Response:
+Sản phẩm của chúng tôi được đánh giá cao bởi tất cả khách hàng.
+Prompt tensor size: torch.Size([133])
+Sample tensor size: torch.Size([181])
+Sample (after padding) tensor size: torch.Size([1024])
+=============Training Example============
+{'input_ids': tensor([    1, 13866,   338,  ...,     0,     0,     0]), 'labels': tensor([-100, -100, -100,  ..., -100, -100, -100]), 'attention_mask': tensor([1., 1., 1.,  ..., 0., 0., 0.])}
+=========================================
+--> Training Set Length = 102
+=============================
+Loading dataset at: /workdir/llama-recipes/src/llama_recipes/datasets/vi-sample.json
+Current max words: 1024
+=============================
+--> Validation Set Length = 102
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Training Epoch: 0/3, step 24/25 completed (loss: 0.5736144781112671): : 300it [04:32,  1.99it/s]
+Saving model at epoch: 0
+Checkpoint name: finetuned_model_e0
+Max CUDA memory allocated was 12 GB
+Max CUDA memory reserved was 14 GB
+Peak active CUDA memory was 12 GB
+Cuda Malloc retires : 0
+CPU Total Peak Memory consumed during the train (max): 0 GB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+evaluating Epoch: 100%|[32m███████████████████████████████████████████████████████████[39m| 102/102 [01:20<00:00,  1.40it/s]
+ eval_ppl=tensor(1.8409, device='cuda:0') eval_epoch_loss=tensor(0.6103, device='cuda:0')
+we are about to save the PEFT modules
+PEFT modules are saved in /workdir/llama-recipes/src/llama_recipes/ directory
+best eval loss on epoch 0 is 0.6102782487869263
+Training Epoch: 0/3, step 24/25 completed (loss: 0.5736144781112671): : 300it [05:54,  1.18s/it]20<00:00,  1.40it/s]
+Training Epoch: 1:   0%|[34m                                                                     [39m| 0/25 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Training Epoch: 1/3, step 24/25 completed (loss: 0.5372795462608337): : 300it [04:32,  1.99it/s]
+Saving model at epoch: 1
+Checkpoint name: finetuned_model_e1
+Max CUDA memory allocated was 12 GB
+Max CUDA memory reserved was 14 GB
+Peak active CUDA memory was 12 GB
+Cuda Malloc retires : 0
+CPU Total Peak Memory consumed during the train (max): 2 GB
+ eval_ppl=tensor(1.7225, device='cuda:0') eval_epoch_loss=tensor(0.5438, device='cuda:0')
+we are about to save the PEFT modules
+PEFT modules are saved in /workdir/llama-recipes/src/llama_recipes/ directory
+best eval loss on epoch 1 is 0.5437896847724915
+
+Training Epoch: 1/3, step 24/25 completed (loss: 0.5372795462608337): : 300it [05:54,  1.18s/it]<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Training Epoch: 2/3, step 24/25 completed (loss: 0.4837287664413452): : 300it [04:33,  1.99it/s]
+evaluating Epoch:   0%|[32m                                                                     [39m| 0/102 [00:00<?, ?it/s]
+Saving model at epoch: 2
+Checkpoint name: finetuned_model_e2
+Max CUDA memory allocated was 12 GB
+Max CUDA memory reserved was 14 GB
+Peak active CUDA memory was 12 GB
+Cuda Malloc retires : 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+evaluating Epoch: 100%|[32m███████████████████████████████████████████████████████████[39m| 102/102 [01:24<00:00,  1.26it/s]
+ eval_ppl=tensor(1.5989, device='cuda:0') eval_epoch_loss=tensor(0.4693, device='cuda:0')
+we are about to save the PEFT modules
+PEFT modules are saved in /workdir/llama-recipes/src/llama_recipes/ directory
+best eval loss on epoch 2 is 0.46933257579803467
+Epoch 3: train_perplexity=1.7516, train_epoch_loss=0.5605, epcoh time 273.54037418216467s
+Key: avg_train_prep, Value: 1.8715183734893799
+Key: avg_train_loss, Value: 0.6253080368041992
+Key: avg_eval_prep, Value: 1.7207975387573242
+Key: avg_eval_loss, Value: 0.5411335229873657
+Key: avg_epoch_time, Value: 273.3989264744644
+
+Training Epoch: 2/3, step 24/25 completed (loss: 0.4837287664413452): : 300it [05:58,  1.19s/it]24<00:00,  1.26it/s]

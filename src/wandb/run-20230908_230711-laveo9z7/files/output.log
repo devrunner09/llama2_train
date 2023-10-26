@@ -1,0 +1,49 @@
+
+Loading checkpoint shards: 100%|██████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.45s/it]
+/workdir/env/lib/python3.10/site-packages/peft/utils/other.py:122: FutureWarning: prepare_model_for_int8_training is deprecated and will be removed in a future version. Use prepare_model_for_kbit_training instead.
+  warnings.warn(
+--> Model /workdir/ViLLM/base_models/models--meta-llama--Llama-2-7b-hf/snapshots/6fdf2e60f86ff2481f2241aaee459f85b5b0bbb9
+--> /workdir/ViLLM/base_models/models--meta-llama--Llama-2-7b-hf/snapshots/6fdf2e60f86ff2481f2241aaee459f85b5b0bbb9 has 262.41024 Million params
+trainable params: 4,194,304 || all params: 6,742,609,920 || trainable%: 0.06220594176090199
+--> Training Set Length = 67017
+/workdir/env/lib/python3.10/site-packages/torch/cuda/memory.py:303: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 0:   0%|[34m                                                               [39m| 0/2094 [00:00<?, ?it/s]
+Training Epoch: 0:   0%|[34m                                                               [39m| 0/2094 [00:00<?, ?it/s]/workdir/env/lib/python3.10/site-packages/bitsandbytes/autograd/_functions.py:321: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+Training Epoch: 0:   0%|[34m                                                               [39m| 0/2094 [00:17<?, ?it/s]Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/workdir/llama-recipes/src/llama_recipes/finetuning.py", line 257, in <module>
+    fire.Fire(main)
+  File "/workdir/env/lib/python3.10/site-packages/fire/core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "/workdir/env/lib/python3.10/site-packages/fire/core.py", line 475, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "/workdir/env/lib/python3.10/site-packages/fire/core.py", line 691, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "/workdir/llama-recipes/src/llama_recipes/finetuning.py", line 237, in main
+    results = train(
+  File "/workdir/llama-recipes/src/llama_recipes/utils/train_utils.py", line 97, in train
+    wandb.log({"loss": loss.detach().float()})
+NameError: name 'wandb' is not defined
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/workdir/llama-recipes/src/llama_recipes/finetuning.py", line 257, in <module>
+    fire.Fire(main)
+  File "/workdir/env/lib/python3.10/site-packages/fire/core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "/workdir/env/lib/python3.10/site-packages/fire/core.py", line 475, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "/workdir/env/lib/python3.10/site-packages/fire/core.py", line 691, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "/workdir/llama-recipes/src/llama_recipes/finetuning.py", line 237, in main
+    results = train(
+  File "/workdir/llama-recipes/src/llama_recipes/utils/train_utils.py", line 97, in train
+    wandb.log({"loss": loss.detach().float()})
+NameError: name 'wandb' is not defined

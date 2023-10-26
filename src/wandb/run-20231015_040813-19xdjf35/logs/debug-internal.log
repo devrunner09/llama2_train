@@ -1,0 +1,56 @@
+2023-10-15 04:08:13,618 INFO    StreamThr :2939 [internal.py:wandb_internal():86] W&B internal server running at pid: 2939, started at: 2023-10-15 04:08:13.617738
+2023-10-15 04:08:13,619 DEBUG   HandlerThread:2939 [handler.py:handle_request():144] handle_request: status
+2023-10-15 04:08:13,621 INFO    WriterThread:2939 [datastore.py:open_for_write():85] open: /workdir/llama-recipes/src/wandb/run-20231015_040813-19xdjf35/run-19xdjf35.wandb
+2023-10-15 04:08:13,622 DEBUG   SenderThread:2939 [sender.py:send():379] send: header
+2023-10-15 04:08:13,622 DEBUG   SenderThread:2939 [sender.py:send():379] send: run
+2023-10-15 04:08:14,362 INFO    SenderThread:2939 [dir_watcher.py:__init__():211] watching files in: /workdir/llama-recipes/src/wandb/run-20231015_040813-19xdjf35/files
+2023-10-15 04:08:14,363 INFO    SenderThread:2939 [sender.py:_start_run_threads():1121] run started: 19xdjf35 with start time 1697342893.61874
+2023-10-15 04:08:14,363 DEBUG   SenderThread:2939 [sender.py:send_request():406] send_request: summary_record
+2023-10-15 04:08:14,363 INFO    SenderThread:2939 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-10-15 04:08:14,369 DEBUG   HandlerThread:2939 [handler.py:handle_request():144] handle_request: check_version
+2023-10-15 04:08:14,369 DEBUG   SenderThread:2939 [sender.py:send_request():406] send_request: check_version
+2023-10-15 04:08:14,653 DEBUG   HandlerThread:2939 [handler.py:handle_request():144] handle_request: run_start
+2023-10-15 04:08:14,662 DEBUG   HandlerThread:2939 [system_info.py:__init__():31] System info init
+2023-10-15 04:08:14,662 DEBUG   HandlerThread:2939 [system_info.py:__init__():46] System info init done
+2023-10-15 04:08:14,662 INFO    HandlerThread:2939 [system_monitor.py:start():181] Starting system monitor
+2023-10-15 04:08:14,662 INFO    SystemMonitor:2939 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-10-15 04:08:14,663 INFO    HandlerThread:2939 [system_monitor.py:probe():201] Collecting system info
+2023-10-15 04:08:14,663 INFO    SystemMonitor:2939 [interfaces.py:start():190] Started cpu monitoring
+2023-10-15 04:08:14,664 INFO    SystemMonitor:2939 [interfaces.py:start():190] Started disk monitoring
+2023-10-15 04:08:14,664 INFO    SystemMonitor:2939 [interfaces.py:start():190] Started gpu monitoring
+2023-10-15 04:08:14,665 INFO    SystemMonitor:2939 [interfaces.py:start():190] Started memory monitoring
+2023-10-15 04:08:14,666 INFO    SystemMonitor:2939 [interfaces.py:start():190] Started network monitoring
+2023-10-15 04:08:14,674 DEBUG   HandlerThread:2939 [system_info.py:probe():195] Probing system
+2023-10-15 04:08:14,674 DEBUG   HandlerThread:2939 [system_info.py:probe():240] Probing system done
+2023-10-15 04:08:14,674 DEBUG   HandlerThread:2939 [system_monitor.py:probe():210] {'os': 'Linux-5.4.0-162-generic-x86_64-with-glibc2.35', 'python': '3.10.12', 'heartbeatAt': '2023-10-15T04:08:14.674086', 'startedAt': '2023-10-15T04:08:13.605849', 'docker': None, 'cuda': None, 'args': ('--use_peft', '--peft_method', 'lora', '--model_name', '/workdir/ViLLM/finetuned_models', '--output_dir', '/workdir/ViLLM/26k_finetuned'), 'state': 'running', 'program': '-m llama_recipes.finetuning', 'host': '017aeb6f8f0a', 'username': 'root', 'executable': '/workdir/env/bin/python', 'cpu_count': 8, 'cpu_count_logical': 8, 'cpu_freq': {'current': 2194.8430000000003, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2194.843, 'min': 0.0, 'max': 0.0}, {'current': 2194.843, 'min': 0.0, 'max': 0.0}, {'current': 2194.843, 'min': 0.0, 'max': 0.0}, {'current': 2194.843, 'min': 0.0, 'max': 0.0}, {'current': 2194.843, 'min': 0.0, 'max': 0.0}, {'current': 2194.843, 'min': 0.0, 'max': 0.0}, {'current': 2194.843, 'min': 0.0, 'max': 0.0}, {'current': 2194.843, 'min': 0.0, 'max': 0.0}], 'disk': {'total': 497.48069763183594, 'used': 418.21645736694336}, 'gpu': 'NVIDIA A30', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA A30', 'memory_total': 25769803776}], 'memory': {'total': 31.319129943847656}}
+2023-10-15 04:08:14,674 INFO    HandlerThread:2939 [system_monitor.py:probe():211] Finished collecting system info
+2023-10-15 04:08:14,674 INFO    HandlerThread:2939 [system_monitor.py:probe():214] Publishing system info
+2023-10-15 04:08:14,674 DEBUG   HandlerThread:2939 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-10-15 04:08:14,674 DEBUG   HandlerThread:2939 [system_info.py:_save_pip():67] Saving pip packages done
+2023-10-15 04:08:14,674 INFO    HandlerThread:2939 [system_monitor.py:probe():216] Finished publishing system info
+2023-10-15 04:08:14,678 DEBUG   SenderThread:2939 [sender.py:send():379] send: files
+2023-10-15 04:08:14,678 INFO    SenderThread:2939 [sender.py:_save_file():1375] saving file wandb-metadata.json with policy now
+2023-10-15 04:08:14,683 DEBUG   SenderThread:2939 [sender.py:send():379] send: telemetry
+2023-10-15 04:08:14,684 DEBUG   HandlerThread:2939 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-15 04:08:14,684 DEBUG   SenderThread:2939 [sender.py:send_request():406] send_request: stop_status
+2023-10-15 04:08:15,364 INFO    Thread-12 :2939 [dir_watcher.py:_on_file_created():271] file/dir created: /workdir/llama-recipes/src/wandb/run-20231015_040813-19xdjf35/files/wandb-summary.json
+2023-10-15 04:08:15,364 INFO    Thread-12 :2939 [dir_watcher.py:_on_file_created():271] file/dir created: /workdir/llama-recipes/src/wandb/run-20231015_040813-19xdjf35/files/wandb-metadata.json
+2023-10-15 04:08:15,365 INFO    Thread-12 :2939 [dir_watcher.py:_on_file_created():271] file/dir created: /workdir/llama-recipes/src/wandb/run-20231015_040813-19xdjf35/files/requirements.txt
+2023-10-15 04:08:15,597 INFO    wandb-upload_0:2939 [upload_job.py:push():131] Uploaded file /tmp/tmp_sb3b27hwandb/0yfwf7l0-wandb-metadata.json
+2023-10-15 04:08:19,132 DEBUG   HandlerThread:2939 [handler.py:handle_request():144] handle_request: status_report
+2023-10-15 04:08:24,134 DEBUG   HandlerThread:2939 [handler.py:handle_request():144] handle_request: status_report
+2023-10-15 04:08:29,135 DEBUG   HandlerThread:2939 [handler.py:handle_request():144] handle_request: status_report
+2023-10-15 04:08:29,682 DEBUG   HandlerThread:2939 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-15 04:08:29,683 DEBUG   SenderThread:2939 [sender.py:send_request():406] send_request: stop_status
+2023-10-15 04:08:34,982 DEBUG   HandlerThread:2939 [handler.py:handle_request():144] handle_request: status_report
+2023-10-15 04:08:39,983 DEBUG   HandlerThread:2939 [handler.py:handle_request():144] handle_request: status_report
+2023-10-15 04:08:44,683 DEBUG   HandlerThread:2939 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-15 04:08:44,683 DEBUG   SenderThread:2939 [sender.py:send_request():406] send_request: stop_status
+2023-10-15 04:08:45,927 DEBUG   HandlerThread:2939 [handler.py:handle_request():144] handle_request: status_report
+2023-10-15 04:08:46,374 INFO    Thread-12 :2939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /workdir/llama-recipes/src/wandb/run-20231015_040813-19xdjf35/files/config.yaml
+2023-10-15 04:08:50,680 INFO    memory    :2939 [interfaces.py:monitor():140] Process proc.memory.rssMB has exited.
+2023-10-15 04:08:50,681 DEBUG   SystemMonitor:2939 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-10-15 04:08:50,681 DEBUG   SystemMonitor:2939 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-10-15 04:08:50,681 DEBUG   SystemMonitor:2939 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-10-15 04:08:50,684 DEBUG   SenderThread:2939 [sender.py:send():379] send: stats
+2023-10-15 04:08:51,176 INFO    MainThread:2939 [internal.py:handle_exit():76] Internal process exited
